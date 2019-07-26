@@ -1,6 +1,5 @@
 <?php
 
-
 return [
     // 存储引擎: config/filesystem.php 中 disks， public 或 qiniu
     'disk' => config('filesystems.default', 'public'),
