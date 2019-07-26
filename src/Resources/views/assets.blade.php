@@ -3,3 +3,6 @@
 @if($locale = strtolower(config('app.locale','zh-CN')))
 <script type="text/javascript" src="{{ asset("vendor/ueditor/lang/{$locale}/{$locale}.js") }}"></script>
 @endif
+<script>
+    window.UEDITOR_CONFIG.serverUrl = '{{ config('ueditor.route.name') }}'
+</script>
