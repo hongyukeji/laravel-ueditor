@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 
 class UEditorServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(Router $router)
     {
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'UEditor');
 
@@ -24,7 +24,7 @@ class UEditorServiceProvider extends ServiceProvider
             realpath(__DIR__ . '/../Resources/assets/ueditor') => public_path('vendor/ueditor'),
         ], 'assets');
 
-        $this->registerRoute();
+        $this->registerRoute($router);
     }
 
     public function register()
@@ -35,9 +35,8 @@ class UEditorServiceProvider extends ServiceProvider
         });
     }
 
-    protected function registerRoute()
+    protected function registerRoute($router)
     {
-        $router = new Router();
         if (!$this->app->routesAreCached()) {
             $router->group(array_merge(['namespace' => __NAMESPACE__ . '\Http\Controllers'], config('ueditor.route.options', [])), function ($router) {
                 $router->any(config('ueditor.route.name', '/ueditor/server'), 'UEditorController@serve');
