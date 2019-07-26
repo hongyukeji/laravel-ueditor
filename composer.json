@@ -1,0 +1,27 @@
+{
+    "name": "hongyukeji/laravel-ueditor",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shadow",
+            "email": "admin@hongyuvip.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hongyukeji\\LaravelUEditor\\Providers\\UEditorServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hongyukeji\\LaravelUEditor\\": "src"
+        }
+    }
+}
