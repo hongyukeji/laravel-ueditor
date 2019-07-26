@@ -1,6 +1,6 @@
 <?php
 
-namespace Hongyukeji\LaravelUeditor\Traits;
+namespace Hongyukeji\LaravelUEditor\Traits;
 
 use Illuminate\Support\Str;
 use League\Flysystem\Adapter\Local as LocalAdapter;

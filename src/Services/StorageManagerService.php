@@ -1,6 +1,6 @@
 <?php
 
-namespace Hongyukeji\LaravelUeditor\Services;
+namespace Hongyukeji\LaravelUEditor\Services;
 
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use Hongyukeji\LaravelUEditor\Events\Uploaded;
 use Hongyukeji\LaravelUEditor\Events\Uploading;
 use Hongyukeji\LaravelUEditor\Events\Catched;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Hongyukeji\LaravelUeditor\Traits\UrlResolverServiceTrait;
+use Hongyukeji\LaravelUEditor\Traits\UrlResolverServiceTrait;
 
 
 class StorageManagerService

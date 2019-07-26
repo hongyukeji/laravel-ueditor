@@ -5,7 +5,7 @@ namespace Hongyukeji\LaravelUEditor\Providers;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
-use Hongyukeji\LaravelUeditor\Services\StorageManagerService;
+use Hongyukeji\LaravelUEditor\Services\StorageManagerService;
 
 class UEditorServiceProvider extends ServiceProvider
 {
@@ -39,7 +39,7 @@ class UEditorServiceProvider extends ServiceProvider
     protected function registerRoute($router)
     {
         if (!$this->app->routesAreCached()) {
-            $router->group(array_merge(['namespace' => __NAMESPACE__ . '\Http\Controllers'], config('ueditor.route.options', [])), function ($router) {
+            $router->group(array_merge(['namespace' => 'Hongyukeji\\LaravelUEditor\\Http\\Controllers'], config('ueditor.route.options', [])), function ($router) {
                 $router->any(config('ueditor.route.name', '/ueditor/server'), 'UEditorController@serve');
             });
         }
