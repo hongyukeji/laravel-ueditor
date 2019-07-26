@@ -5,6 +5,7 @@ namespace Hongyukeji\LaravelUEditor\Providers;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
+use Hongyukeji\LaravelUeditor\Services\StorageManagerService;
 
 class UEditorServiceProvider extends ServiceProvider
 {
@@ -31,7 +32,7 @@ class UEditorServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../Config/ueditor.php', 'ueditor');
         $this->app->singleton('ueditor.storage', function ($app) {
-            return new StorageManager(Storage::disk($app['config']->get('ueditor.disk', 'public')));
+            return new StorageManagerService(Storage::disk($app['config']->get('ueditor.disk', 'public')));
         });
     }
 
