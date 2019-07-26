@@ -7,7 +7,7 @@
 
 ```shell
 $ composer require hongyukeji/laravel-ueditor -vvv
-$ php artisan vendor:publish --provider="Hongyukeji\LaravelUEditor\UEditorServiceProvider"
+$ php artisan vendor:publish --provider="Hongyukeji\LaravelUEditor\Providers\UEditorServiceProvider"
 ```
 
 ## Usage
