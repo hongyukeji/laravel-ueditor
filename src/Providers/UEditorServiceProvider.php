@@ -17,11 +17,11 @@ class UEditorServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            realpath(__DIR__ . '/../Resources/views') => base_path('Resources/views/vendor/ueditor'),
+            __DIR__ . '/../Resources/views' => base_path('Resources/views/vendor/ueditor'),
         ], 'view');
 
         $this->publishes([
-            realpath(__DIR__ . '/../Resources/assets/ueditor') => public_path('vendor/ueditor'),
+            __DIR__ . '/../Resources/assets/ueditor' => public_path('vendor/ueditor'),
         ], 'assets');
 
         $this->registerRoute($router);
