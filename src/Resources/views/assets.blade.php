@@ -4,5 +4,5 @@
 <script type="text/javascript" src="{{ asset("vendor/ueditor/lang/{$locale}/{$locale}.js") }}"></script>
 @endif
 <script>
-    window.UEDITOR_CONFIG.serverUrl = '{{ config('ueditor.route.name') }}'
+    window.UEDITOR_CONFIG.serverUrl = '{{ @route_url(config('ueditor.route.name')) ?? config('ueditor.route.name') }}'
 </script>
